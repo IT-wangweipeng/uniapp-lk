@@ -1,0 +1,153 @@
+<template>
+	<div class="sg-nvue-dialog" @click="bindCancelBtnClick">
+		<div class="sg-nvue-dialog__inner">
+      <div class="sg-nvue-dialog__header">
+        <text class="sg-nvue-dialog__title">{{config.title}}</text>
+      </div>
+      <div class="sg-nvue-dialog__body">
+        <text class="sg-nvue-dialog__message">{{config.content}}</text>
+      </div>
+      <div class="sg-nvue-dialog__footer">
+        <div class="sg-nvue-dialog__btn" v-if="config.showCancel" @click="bindCancelBtnClick">
+          <text class="sg-nvue-dialog__cancel">{{config.cancelText}}</text>
+        </div>
+        <div class="sg-nvue-dialog__split" v-if="config.showCancel"></div>
+        <div class="sg-nvue-dialog__btn" @click="bindConfirmBtnClick">
+          <text class="sg-nvue-dialog__confirm">{{config.confirmText}}</text>
+        </div>
+      </div>
+    </div>
+	</div>
+</template>
+
+<script>
+	export default {
+		data() {
+      return {
+        dialogId: null,
+        config: {
+          title: '提示',
+          content: '您确定要着这样做吗？',
+          showCancel: true,
+          cancelText: '取消',
+          confirmText: '确定'
+          
+        }
+      }
+    },
+    methods: {
+      bindCancelBtnClick() {
+        this.closeDialog('cancle');
+      },
+      bindConfirmBtnClick() {
+        this.closeDialog('confirm');
+      },
+      closeDialog(type) {
+        const subNVue = uni.getCurrentSubNVue();
+        uni.$emit('gsf-dialog-callback-' + this.dialogId, {  
+          type: type
+        });  
+        subNVue.hide();
+      }
+    },
+    mounted() {
+      const subNVue = uni.getCurrentSubNVue();
+      this.dialogId = subNVue.id;
+      console.log('subNVue init');
+      uni.$on('gsf-dialog-' + this.dialogId, (res) => {
+        this.config = Object.assign(this.config, res);
+      });
+    },
+    beforeDestroy() {
+      console.log('subNVue destroy');
+      uni.$off('gsf-dialog-' + this.dialogId);
+      uni.$off('gsf-dialog-callback-' + this.dialogId);
+    }
+	}
+</script>
+
+<style>
+  .sg-nvue-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 80;
+    padding-right: 80;
+  }
+  .sg-nvue-dialog__inner {
+    flex: 1;
+    padding-top: 40;
+    background-color: #fff;
+    border-radius: 10;
+  }
+  .sg-nvue-dialog__header {
+    height: 42;
+    align-items: center;
+    justify-content: center;
+  }
+  .sg-nvue-dialog__title {
+    flex: 1;
+    height: 42;
+    line-height: 42;
+    font-size: 32;
+    font-weight: 500;
+    color: #333;
+  }
+  .sg-nvue-dialog__body {
+    justify-content: center;
+    align-items: center;
+    padding: 12 50 150 50;
+  }
+  .sg-nvue-dialog__message {
+    /* flex: 1; */
+    font-size: 28;
+    line-height: 42;
+    text-align: center;
+    color: #999;
+  }
+  .sg-nvue-dialog__footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    border-top-width: 1;
+    border-top-style: solid;
+    border-top-color: #F0F0F0;
+  }
+  .sg-nvue-dialog__btn {
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 100;
+  }
+  .sg-nvue-dialog__btn:active {
+    background-color: #f2f2f2;
+  }
+  .sg-nvue-dialog__cancel, .sg-nvue-dialog__confirm {
+    flex: 1;
+    height: 100;
+    line-height: 100;
+    font-size: 32;
+    text-align: center;
+  }
+  .sg-nvue-dialog__cancel {
+    color: #333;
+  }
+  .sg-nvue-dialog__confirm {
+    color: #3D7CFF;
+  }
+ .sg-nvue-dialog__split {
+    height: 100;
+    width: 1;
+    background-color: #F0F0F0;
+  }
+</style>

@@ -1,0 +1,100 @@
+@import '~@/common/scss/mixin.scss';
+
+/* 按钮颜色 */
+$buttons: (
+  name: 'default',
+  bgColor: #fff,
+  textColor: #262626
+),(
+  name: 'primary',
+  bgColor: $uni-color-primary,
+  textColor: #fff
+), (
+  name: 'warning',
+  bgColor: #FF6E1A,
+  textColor: #fff
+), (
+  name: 'success',
+  bgColor: #07c160,
+  textColor: #fff
+), (
+  name: 'danger',
+  bgColor: #f44,
+  textColor: #fff
+);
+
+.sg-button {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  border-radius: 6rpx;
+  background: #fff;
+  border: 1px solid #eee;
+  color: $uni-text-color;
+  padding: 0 20rpx;
+  margin: 0;
+  text-align: center;
+  @include ellipsis(1);
+}
+.sg-button::after {
+  border: 0;
+}
+
+
+@each $btn in $buttons{
+  .sg-button[type='#{map-get($btn, name)}'] {
+    border: none;
+    background: map-get($btn, bgColor);
+    color: map-get($btn, textColor);
+  }
+  .sg-button[disabled][type='#{map-get($btn, name)}'] { 
+    // opacity: 0.6;
+    border: none;
+    background: #D5D5D5;
+    color: map-get($btn, textColor);
+  }
+  .sg-button[type='#{map-get($btn, name)}'][plain] {
+    background: transparent;
+    border: 1px solid map-get($btn, bgColor);
+    color: map-get($btn, bgColor);
+  }
+  .sg-button[disabled][type='#{map-get($btn, name)}'][plain] { 
+    // opacity: $uni-opacity-disabled;
+    background: transparent;
+    border: 1px solid map-get($btn, bgColor);
+    color: map-get($btn, bgColor);
+  }
+}
+.sg-button, .sg-button[size='default']{
+  font-size: $uni-font-size-base;
+  height: 68rpx;
+  line-height: 68rpx;
+}
+
+.sg-button[size='small']{
+  font-size: $uni-font-size-sm;
+  height: 48rpx;
+  line-height: 48rpx;
+}
+
+.sg-button[size='large']{
+  font-size: $uni-font-size-lg;
+  height: 98rpx;
+  line-height: 98rpx;
+}
+
+.sg-button.button-hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 1;
+  border-radius: inherit;
+  background: rgba(0, 0, 0, 0.05);
+}
+// 方角按钮
+.sg-button.sg-button--square {
+  border-radius: 0;
+}

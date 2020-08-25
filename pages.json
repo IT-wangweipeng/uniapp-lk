@@ -1,0 +1,592 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		}
+	    ,{
+            "path" : "pages/login/login",
+            "style" : {
+              "navigationBarTitleText": "登录"
+            }
+        }
+        ,{
+            "path" : "pages/register/register",
+            "style" : {
+              "navigationBarTitleText": "注册"
+            }
+        }
+        ,{
+            "path" : "pages/forget-password/forget-password",
+            "style" : {
+              "navigationBarTitleText": "忘记密码"
+            }
+        }
+        ,{
+            "path" : "pages/select-shop/select-shop",
+            "style" : {
+              "navigationBarTitleText": "选择店铺"
+            }
+        }
+        ,{
+            "path" : "pages/create-alliance/create-alliance",
+            "style" : {
+              "navigationBarTitleText": "新建联盟"
+            }
+        }
+        ,{
+            "path" : "pages/invited-alliance-members/invited-alliance-members",
+            "style" : {
+              "navigationBarTitleText": "邀请联盟成员"
+            }
+        }
+        ,{
+            "path" : "pages/alliance-detail/alliance-detail",
+            "style" : {
+              "navigationBarTitleText": "联盟名称"
+            }
+        }
+        ,{
+            "path" : "pages/alliance/alliance",
+            "style" : {
+              "navigationBarTitleText": "联盟",
+							"enablePullDownRefresh": true
+            }
+        }
+        ,{
+            "path" : "pages/alliance-intro/alliance-intro",
+            "style" : {
+              "navigationBarTitleText": "联盟详情"
+            }
+        }
+        ,{
+            "path" : "pages/alliance-member-manage/alliance-member-manage",
+            "style" : {
+              "navigationBarTitleText": "联盟成员管理"
+            }
+        }
+        ,{
+            "path" : "pages/alliance-join-agreement/alliance-join-agreement",
+            "style" : {
+              "navigationBarTitleText": "加入联盟须知"
+            }
+        }
+        ,{
+            "path" : "pages/inventory-shared-products/inventory-shared-products",
+            "style" : {
+              "navigationBarTitleText": "库存共享商品"
+            }
+        }
+        ,{
+            "path" : "pages/alliance-select-inventory/alliance-select-inventory",
+            "style" : {
+              "navigationBarTitleText": "选择库存"
+            }
+        }
+        ,{
+            "path" : "pages/shop-intro/shop-intro",
+            "style" : {
+              "navigationBarTitleText": "店铺名称"
+            }
+        }
+        ,{
+            "path" : "pages/product-detail/product-detail",
+            "style" : {
+              "navigationBarTitleText": "商品详情"
+            }
+        }
+        ,{
+            "path" : "pages/place-order/place-order",
+            "style" : {
+              "navigationBarTitleText": "完善订单"
+            }
+        }
+        ,{
+            "path" : "pages/find-goods/find-goods",
+            "style" : {
+              "navigationBarTitleText": "寻货宝",
+							"enablePullDownRefresh": true
+            }
+        }
+        ,{
+            "path" : "pages/customer-service-consult/customer-service-consult",
+            "style" : {
+              "navigationBarTitleText": "客服"
+            }
+        }
+        ,{
+            "path" : "pages/me/me",
+            "style" : {
+              "navigationBarTitleText": "我的"
+            }
+        }
+        ,{
+            "path" : "pages/my-alliance/my-alliance",
+            "style" : {
+              "navigationBarTitleText": "我的联盟",
+							"enablePullDownRefresh": true
+            }
+        }
+				,{
+				      "path" : "pages/edit-nickname/edit-nickname",
+				      "style" : {
+				        "navigationBarTitleText": "修改昵称"
+				      }
+				  }
+        ,{
+            "path" : "pages/message-list/message-list",
+            "style" : {
+              "navigationBarTitleText": "消息"
+            }
+        }
+        ,{
+            "path" : "pages/message-detail/message-detail",
+            "style" : {
+              "navigationBarTitleText": "消息详情"
+            }
+        }
+        ,{
+            "path" : "pages/problem-list/problem-list",
+            "style" : {
+              "navigationBarTitleText": "常见问题"
+            }
+        }
+        ,{
+            "path" : "pages/problem-edit/problem-edit",
+            "style" : {
+              "navigationBarTitleText": "常见问题编辑"
+            }
+        }
+        ,{
+            "path" : "pages/create-find-goods/create-find-goods",
+            "style" : {
+              "navigationBarTitleText": "新建寻货"
+            }
+        }
+        ,{
+            "path" : "pages/edit-find-goods-product/edit-find-goods-product",
+            "style" : {
+              "navigationBarTitleText": "编辑商品"
+            }
+        }
+				,{
+				    "path" : "pages/add-new-goods/add-new-goods",
+				    "style" : {
+				      "navigationBarTitleText": "调货详情"
+				    }
+				}
+				,{
+				    "path" : "pages/find-goods-product-detail/find-goods-product-detail",
+				    "style" : {
+				      "navigationBarTitleText": "查看商品"
+				    }
+				}
+        ,{
+            "path" : "pages/create-clear-goods/create-clear-goods",
+            "style" : {
+              "navigationBarTitleText": "新建清货"
+            }
+        }
+        ,{
+            "path" : "pages/edit-clear-goods-product/edit-clear-goods-product",
+            "style" : {
+              "navigationBarTitleText": "查看商品"
+            }
+        }
+        ,{
+            "path" : "pages/clear-goods-list/clear-goods-list",
+            "style" : {
+              "navigationBarTitleText": "清货列表"
+            }
+        }
+        ,{
+            "path" : "pages/find-goods-list/find-goods-list",
+            "style" : {
+              "navigationBarTitleText": "寻货列表"
+            }
+        }
+        ,{
+            "path" : "pages/create-supply/create-supply",
+            "style" : {
+              "navigationBarTitleText": "新建供货"
+            }
+        }
+        ,{
+            "path" : "pages/supply-list/supply-list",
+            "style" : {
+              "navigationBarTitleText": "供货列表"
+            }
+        }
+        ,{
+            "path" : "pages/address-list/address-list",
+            "style" : {
+              "navigationBarTitleText": "收货地址"
+            }
+        }
+        ,{
+            "path" : "pages/edit-address/edit-address",
+            "style" : {
+              "navigationBarTitleText": ""
+            }
+        }
+        ,{
+            "path" : "pages/buyer-order-detail/buyer-order-detail",
+            "style" : {
+              "navigationBarTitleText": "订单详情"
+            }
+        }
+        ,{
+            "path" : "pages/bind-phone/bind-phone",
+            "style" : {
+              "navigationBarTitleText": "绑定手机号"
+            }
+        }
+        ,{
+            "path" : "pages/recharge/recharge",
+            "style" : {
+              "navigationBarTitleText": "余额充值"
+            }
+        }
+        ,{
+            "path" : "pages/withdraw-deposit/withdraw-deposit",
+            "style" : {
+              "navigationBarTitleText": "申请提现"
+            }
+        }
+        ,{
+            "path" : "pages/withdraw-deposit-record/withdraw-deposit-record",
+            "style" : {
+              "navigationBarTitleText": "提现记录"
+            }
+        }
+        ,{
+            "path" : "pages/seller-order-list/seller-order-list",
+            "style" : {
+              "navigationBarTitleText": "订单管理",
+							"enablePullDownRefresh": true
+            }
+        }
+        ,{
+            "path" : "pages/deliver-goods/deliver-goods",
+            "style" : {
+              "navigationBarTitleText": "订单发货"
+            }
+        }
+        ,{
+            "path" : "pages/clear-goods-record/clear-goods-record",
+            "style" : {
+              "navigationBarTitleText": "我的清货列表"
+            }
+        }
+        ,{
+            "path" : "pages/find-goods-record/find-goods-record",
+            "style" : {
+              "navigationBarTitleText": "我的寻货列表"
+            }
+        }
+        ,{
+            "path" : "pages/buyer-order-list/buyer-order-list",
+            "style" : {
+              "navigationBarTitleText": "订单管理",
+							"enablePullDownRefresh": true
+            }
+        }
+        ,{
+            "path" : "pages/supply-record/supply-record",
+            "style" : {
+              "navigationBarTitleText": "供货历史"
+            }
+        }
+        ,{
+            "path" : "pages/seller-order-detail/seller-order-detail",
+            "style" : {
+              "navigationBarTitleText": "订单详情"
+            }
+        }
+        ,{
+            "path" : "pages/problem-detail/problem-detail",
+            "style" : {
+              "navigationBarTitleText": "常见问题详情"
+            }
+        }
+        
+    ],
+    "condition" : {
+          //模式配置，仅开发期间生效
+          "current" : 0, //当前激活的模式（list 的索引项）
+          "list" : [
+			  {
+			      "name" : "index", //模式名称
+			      "path" : "pages/index/index", //启动页面，必选
+			      "query" : "" //启动参数，在页面的onLoad函数里面得到。
+			  },
+              {
+                  "name" : "login", //模式名称
+                  "path" : "pages/login/login", //启动页面，必选
+                  "query" : "" //启动参数，在页面的onLoad函数里面得到。
+              },
+              {
+                  "name" : "register", 
+                  "path" : "pages/register/register", 
+                  "query" : "" 
+              },
+              {
+                  "name" : "forget-password",
+                  "path" : "pages/forget-password/forget-password",
+                  "query" : ""
+              },
+              {
+                  "name" : "select-shop",
+                  "path" : "pages/select-shop/select-shop",
+                  "query" : ""
+              },
+              {
+                  "name" : "create-alliance",
+                  "path" : "pages/create-alliance/create-alliance",
+                  "query" : ""
+              },
+              {
+                "name": "invited-alliance-members",
+                "path": "pages/invited-alliance-members/invited-alliance-members",
+                "query" : ""
+              },
+              {
+                "name": "alliance-detail",
+                "path": "pages/alliance-detail/alliance-detail",
+                "query" : ""
+              },
+              {
+                "name": "alliance",
+                "path": "pages/alliance/alliance",
+                "query" : ""
+              },
+              {
+                "name": "alliance-intro",
+                "path": "pages/alliance-intro/alliance-intro",
+                "query" : ""
+              },
+              {
+                "name": "alliance-member-manage",
+                "path": "pages/alliance-member-manage/alliance-member-manage",
+                "query" : ""
+              },
+              {
+                "name": "inventory-shared-products",
+                "path": "pages/inventory-shared-products/inventory-shared-products",
+                "query": ""
+              },
+              {
+                "name": "alliance-select-inventory",
+                "path": "pages/alliance-select-inventory/alliance-select-inventory",
+                "query": "type=1"
+              },
+              {
+                "name": "shop-intro",
+                "path": "pages/shop-intro/shop-intro",
+                "query": ""
+              },
+              {
+                "name": "product-detail",
+                "path": "pages/product-detail/product-detail",
+                "query": ""
+              },
+              {
+                "name": "find-goods",
+                "path": "pages/find-goods/find-goods",
+                "query": ""
+              },
+              {
+                "name": "customer-service-consult",
+                "path": "pages/customer-service-consult/customer-service-consult",
+                "query": ""
+              },
+              {
+                "name": "me",
+                "path": "pages/me/me",
+                "query": ""
+              },
+              {
+                "name": "my-alliance",
+                "path": "pages/my-alliance/my-alliance",
+                "query": ""
+              },
+              {
+                "name": "message-list",
+                "path": "pages/message-list/message-list",
+                "query": ""
+              },
+              {
+                "name": "message-detail",
+                "path": "pages/message-detail/message-detail",
+                "query": ""
+              },
+              {
+                "name": "problem-list",
+                "path": "pages/problem-list/problem-list",
+                "query": ""
+              },
+              {
+                "name": "problem-edit",
+                "path": "pages/problem-edit/problem-edit",
+                "query": ""
+              },
+              {
+                "name": "create-find-goods",
+                "path": "pages/create-find-goods/create-find-goods",
+                "query": ""
+              },
+              {
+                "name": "edit-find-goods-product",
+                "path": "pages/edit-find-goods-product/edit-find-goods-product",
+                "query": ""
+              },
+              {
+                "name": "create-clear-goods",
+                "path": "pages/create-clear-goods/create-clear-goods",
+                "query": ""
+              },
+              {
+                "name": "clear-goods-list",
+                "path": "pages/clear-goods-list/clear-goods-list",
+                "query": ""
+              },
+              {
+                "name": "find-goods-list",
+                "path": "pages/find-goods-list/find-goods-list",
+                "query": ""
+              },
+              {
+                "name": "create-supply",
+                "path": "pages/create-supply/create-supply",
+                "query": ""
+              },
+              {
+                "name": "supply-list",
+                "path": "pages/supply-list/supply-list",
+                "query": ""
+              },
+              {
+                "name": "place-order",
+                "path": "pages/place-order/place-order",
+                "query": ""
+              },
+              {
+                "name": "address-list",
+                "path": "pages/address-list/address-list",
+                "query": ""
+              },
+              {
+                "name": "edit-address",
+                "path": "pages/edit-address/edit-address",
+                "query": ""
+              },
+              {
+                "name": "buyer-order-detail",
+                "path": "pages/buyer-order-detail/buyer-order-detail",
+                "query": ""
+              },
+              {
+                "name": "bind-phone",
+                "path": "pages/bind-phone/bind-phone",
+                "query": ""
+              },
+              {
+                "name": "recharge",
+                "path": "pages/recharge/recharge",
+                "query": ""
+              },
+              {
+                "name": "withdraw-deposit",
+                "path": "pages/withdraw-deposit/withdraw-deposit",
+                "query": ""
+              },
+              {
+                "name": "withdraw-deposit-record",
+                "path": "pages/withdraw-deposit-record/withdraw-deposit-record",
+                "query": ""
+              },
+              {
+                "name": "seller-order-list",
+                "path": "pages/seller-order-list/seller-order-list",
+                "query": ""
+              },
+              {
+                "name": "deliver-goods",
+                "path": "pages/deliver-goods/deliver-goods",
+                "query": ""
+              },
+              {
+                "name": "clear-goods-record",
+                "path": "pages/clear-goods-record/clear-goods-record",
+                "query": ""
+              },
+              {
+                "name": "find-goods-record",
+                "path": "pages/find-goods-record/find-goods-record",
+                "query": ""
+              },
+              {
+                "name": "buyer-order-list",
+                "path": "pages/buyer-order-list/buyer-order-list",
+                "query": ""
+              },
+              {
+                "name": "supply-record",
+                "path": "pages/supply-record/supply-record",
+                "query": ""
+              },
+              {
+                "name": "seller-order-detail",
+                "path": "pages/seller-order-detail/seller-order-detail",
+                "query": ""
+              },
+              {
+                "name": "problem-detail",
+                "path": "pages/problem-detail/problem-detail",
+                "query": ""
+              }
+              
+              
+          ]
+      },
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "零酷",
+		"navigationBarBackgroundColor": "#EF4345",
+		"backgroundColor": "#FFFFFF"
+	},
+  "tabBar" : {
+      "color" : "#949494",
+      "selectedColor" : "#E80216",
+      "borderStyle" : "black",
+      "backgroundColor" : "#ffffff",
+      "list" : [
+          {
+              "pagePath" : "pages/index/index",
+              "iconPath" : "static/tab/index.png",
+              "selectedIconPath" : "static/tab/index-selected.png",
+              "text" : "首页"
+          },
+          {
+              "pagePath" : "pages/alliance/alliance",
+              "iconPath" : "static/tab/alliance.png",
+              "selectedIconPath" : "static/tab/alliance-selected.png",
+              "text" : "联盟"
+          },
+          {
+              "pagePath" : "pages/find-goods/find-goods",
+              "iconPath" : "static/tab/xunhuobao.png",
+              "selectedIconPath" : "static/tab/xunhuobao-selected.png",
+              "text" : "寻货宝"
+          },
+          {
+              "pagePath" : "pages/me/me",
+              "iconPath" : "static/tab/me.png",
+              "selectedIconPath" : "static/tab/me-selected.png",
+              "text" : "我的"
+          }
+      ]
+  }
+}

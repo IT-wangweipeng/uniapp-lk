@@ -1,0 +1,140 @@
+@mixin triangle($width, $height, $color, $direction) {
+  $width: $width/2;
+  $color-border-style: $height solid $color;
+  $transparent-border-style: $width solid transparent;
+  height: 0;
+  width: 0;
+  @if $direction==up {
+    border-bottom: $color-border-style;
+    border-left: $transparent-border-style;
+    border-right: $transparent-border-style;
+  }
+  @else if $direction==right {
+    border-left: $color-border-style;
+    border-top: $transparent-border-style;
+    border-bottom: $transparent-border-style;
+  }
+  @else if $direction==down {
+    border-top: $color-border-style;
+    border-left: $transparent-border-style;
+    border-right: $transparent-border-style;
+  }
+  @else if $direction==left {
+    border-right: $color-border-style;
+    border-top: $transparent-border-style;
+    border-bottom: $transparent-border-style;
+  }
+}
+
+@mixin no-wrap() {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin shadow-layer() {
+  position: relative;
+  z-index: 0;
+}
+
+// 投影，注意设置投影的元素不能是绝对定位，如需绝对定位，则需要设置wrapper
+@mixin shadow($borderRadius, $background, $offset, $blur) {
+  position: relative;
+  &:before {
+    position: absolute;
+    content: ' ';
+    border-radius: $borderRadius;
+    background: $background;
+    top: $offset;
+    left: $offset;
+    right: $offset;
+    bottom: -$offset;
+    filter: blur($blur);
+    z-index: -1;
+  }
+}
+
+// 设置可按压，a标签active有按压效果
+@mixin pushable($background) {
+  &:active {
+    background: $background;
+    &:before {
+      display: none;
+    }
+  }
+}
+
+@mixin ellipsis($lineNum) {
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal !important;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  word-break: break-all;
+  -webkit-line-clamp: $lineNum;
+  -webkit-box-orient: vertical;
+}
+
+@mixin thin-line-top($color, $left, $right) {
+  position: relative;
+  &::before {
+    position: absolute;
+    left: $left;
+    right: $right;
+    top: 0;
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: $color;
+    z-index: 1;
+  }
+}
+
+@mixin thin-line-bottom($color, $left, $right) {
+  position: relative;
+  &::after {
+    position: absolute;
+    left: $left;
+    right: $right;
+    bottom: 0;
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: $color;
+    z-index: 1;
+  }
+}
+
+@mixin thin-line-left($color, $top, $bottom) {
+  position: relative;
+  &::after {
+    position: absolute;
+    top: $top;
+    bottom: $bottom;
+    left: 0;
+    width: 1px;
+    content: '';
+    -webkit-transform: scaleX(.5);
+    transform: scaleX(.5);
+    background-color: $color;
+    z-index: 1;
+  }
+}
+
+@mixin thin-line-right($color, $top, $bottom) {
+  position: relative;
+  &::after {
+    position: absolute;
+    top: $top;
+    bottom: $bottom;
+    right: 0;
+    width: 1px;
+    content: '';
+    -webkit-transform: scaleX(.5);
+    transform: scaleX(.5);
+    background-color: $color;
+    z-index: 1;
+  }
+}

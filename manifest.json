@@ -1,0 +1,121 @@
+{
+    "name" : "零酷",
+    "appid" : "__UNI__8D92127",
+    "description" : "",
+    "versionName" : "1.0.0",
+    "versionCode" : "100",
+    "transformPx" : false,
+    /* 5+App特有相关 */
+    "app-plus" : {
+        "usingComponents" : true,
+        "nvueCompiler" : "uni-app",
+        "splashscreen" : {
+            "alwaysShowBeforeRender" : true,
+            "waiting" : true,
+            "autoclose" : true,
+            "delay" : 0
+        },
+        /* 模块配置 */
+        "modules" : {
+            "Payment" : {},
+            "Share" : {}
+        },
+        /* 应用发布信息 */
+        "distribute" : {
+            /* android打包配置 */
+            "android" : {
+                "permissions" : [
+                    "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"android.permission.INTERNET\"/>",
+                    "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
+                ]
+            },
+            /* ios打包配置 */
+            "ios" : {
+                "capabilities" : {
+                    "entitlements" : {
+                        "com.apple.developer.associated-domains" : [ "linco.uzipm.com" ]
+                    }
+                },
+                "privacyDescription" : {
+                    "NSCameraUsageDescription" : "扫描二维码需要使用您得相机"
+                }
+            },
+            /* SDK配置 */
+            "sdkConfigs" : {
+                "payment" : {
+                    "weixin" : {
+                        "appid" : "wxc1b45b5a936aa15e",
+                        "UniversalLinks" : "https://linco.uzipm.com/unlink/"
+                    },
+                    "alipay" : {}
+                },
+                "maps" : {},
+                "share" : {
+                    "weixin" : {
+                        "appid" : "wxc1b45b5a936aa15e",
+                        "UniversalLinks" : "https://linco.uzipm.com/unlink/"
+                    }
+                },
+                "push" : {}
+            },
+            "icons" : {
+                "android" : {
+                    "hdpi" : "static/icon/android/72x72.png",
+                    "xhdpi" : "static/icon/android/96x96.png",
+                    "xxhdpi" : "static/icon/android/144x144.png",
+                    "xxxhdpi" : "static/icon/android/192x192.png"
+                },
+                "ios" : {
+                    "appstore" : "static/icon/android/Icon1024.png",
+                    "iphone" : {
+                        "app@2x" : "static/icon/ios/icon_120px.png",
+                        "app@3x" : "static/icon/ios/icon_180px.png",
+                        "spotlight@2x" : "static/icon/ios/icon_80px.png",
+                        "spotlight@3x" : "static/icon/ios/icon_120px.png",
+                        "settings@2x" : "static/icon/ios/icon_58px.png",
+                        "settings@3x" : "static/icon/ios/icon_87px.png",
+                        "notification@2x" : "static/icon/ios/icon_40pt.png"
+                    }
+                }
+            }
+        }
+    },
+    /* 快应用特有相关 */
+    "quickapp" : {},
+    /* 小程序特有相关 */
+    "mp-weixin" : {
+        "appid" : "wx523d2d2cbcce80d9",
+        "setting" : {
+            "urlCheck" : false,
+            "postcss" : true,
+            "minified" : true
+        },
+        "usingComponents" : false
+    },
+    "mp-alipay" : {
+        "usingComponents" : true
+    },
+    "mp-baidu" : {
+        "usingComponents" : true
+    },
+    "mp-toutiao" : {
+        "usingComponents" : true
+    }
+}

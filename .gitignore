@@ -1,0 +1,5 @@
+/unpackage/debug
+/unpackage/dist
+/unpackage/resources
+/node_modules
+.DS_Store

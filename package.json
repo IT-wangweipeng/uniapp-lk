@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@dcloudio/webpack-uni-mp-loader": "^2.0.0-23720191024001",
+    "lodash": "^4.17.15",
+    "mpvue-picker": "^2.1.6"
+  }
+}
